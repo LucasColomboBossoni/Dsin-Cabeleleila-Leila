@@ -232,3 +232,4 @@ C:\Users\Lucas\Desktop\Dsin-CabeleleiraleiraAPI\Dsin-CabeleleiraleiraAPI\obj\Deb
 C:\Users\Lucas\Desktop\Dsin-CabeleleiraleiraAPI\Dsin-CabeleleiraleiraAPI\obj\Debug\net9.0\compressed\gz8gzhen8c-cur5m018px.gz
 C:\Users\Lucas\Desktop\Dsin-CabeleleiraleiraAPI\Dsin-CabeleleiraleiraAPI\obj\Debug\net9.0\compressed\yiqz65t3dh-8y1fj6oqcg.gz
 C:\Users\Lucas\Desktop\Dsin-CabeleleiraleiraAPI\Dsin-CabeleleiraleiraAPI\obj\Debug\net9.0\compressed\e3jqr10jdl-pvjy26o3pu.gz
+C:\Users\Lucas\Desktop\Dsin-CabeleleiraleiraAPI\Dsin-CabeleleiraleiraAPI\obj\Debug\net9.0\Dsin-CabeleleiraleiraAPI.sourcelink.json
