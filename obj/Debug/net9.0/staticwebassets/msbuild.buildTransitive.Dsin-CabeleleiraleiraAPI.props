@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Dsin-CabeleleiraleiraAPI.props" />
+</Project>

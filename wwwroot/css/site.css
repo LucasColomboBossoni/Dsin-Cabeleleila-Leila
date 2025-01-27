@@ -1,0 +1,63 @@
+/* Navbar */
+.navbar {
+  background-color: #ffffff; /* Fundo branco */
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd; /* Adiciona uma borda sutil embaixo para separação */
+}
+
+.navbar-brand {
+  color: #333 !important; /* Letras pretas */
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  color: #333 !important; /* Letras pretas para os links */
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect para links */
+.navbar-nav .nav-link:hover {
+  color: #009688; /* Cor de hover para os links */
+}
+
+/* Navbar collapse (responsividade) */
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+/* Forçando a visibilidade do botão hamburguer */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #333; /* Ícone do botão hamburguer com cor preta */
+}
+
+/* Corrige o espaço e o layout da navbar */
+.navbar-nav {
+  display: flex;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+/* Para garantir que o menu de navegação seja sempre exibido corretamente, mesmo em telas pequenas */
+@media (max-width: 768px) {
+  .navbar-nav {
+      justify-content: center;
+      gap: 20px;
+  }
+}

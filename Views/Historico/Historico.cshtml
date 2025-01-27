@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Agendamentos</title>
+    <link rel="stylesheet" href="/css/historico.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="main-title">Histórico de Agendamentos</h1>
+        <div class="form-container">
+            <h2>Seus Agendamentos</h2>
+            <div id="agendamentos-list"></div>
+            <div id="agendamento-message" style="color: red; margin-top: 10px;"></div>
+        </div>
+    </div>
+    <!-- Formulário de edição de agendamento (inicialmente escondido) -->
+    <div id="edit-agendamento-container" style="display: none;">
+        <h2>Editar Agendamento</h2>
+        <form id="edit-agendamento-form">
+            <input type="hidden" name="id" />
+            <div>
+                <label for="servico">Serviço:</label>
+                <select id="servico" name="servico" required>
+                    <option value="corte">Corte de cabelo</option>
+                    <option value="manicure">Manicure</option>
+                    <option value="massagem">Massagem</option>
+                    <option value="coloracao">Coloração</option>
+                </select>
+            </div>
+            <div>
+                <label for="dataHora">Data e Hora:</label>
+                <input type="datetime-local" name="dataHora" required />
+            </div>
+            <button type="submit">Salvar</button>
+            <button type="button"
+                onclick="document.getElementById('edit-agendamento-container').style.display = 'none';">Cancelar</button>
+        </form>
+    </div>
+
+    <script src="~/js/historico.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+@model Usuario
+
+@{
+    ViewData["Title"] = "Cabeleleira App";
+}
+@if (!ViewData.ModelState.IsValid)
+{
+    <ul>
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <li>@error.ErrorMessage</li>
+        }
+    </ul>
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeleleira App</title>
+    <link rel="stylesheet" href="~/css/usuario.css" asp-append-version="true">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-brand">Dsin Cabeleleila Leila</a>
+            <ul class="navbar-links">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Agendamento"
+                        asp-action="Agendamento">Agendamento</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Historico"
+                        asp-action="Historico">Historico</a>
+                </li>
+                <li class="nav-item" id="login-link">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Usuario">Login</a>
+                </li>
+                <li class="nav-item" id="logout-link" style="display: none;">
+                    <button id="logout-button" class="btn btn-danger">Sair</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h1 class="main-title">Cabeleleira App</h1>
+
+        <div class="form-container">
+            <!-- Registro -->
+            <form id="register-form" asp-controller="Usuario" asp-action="Register" method="post">
+                <h2>Registrar</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="Nome">Nome:</label>
+                        <input type="text" asp-for="Nome" placeholder="Nome" required />
+                        <span asp-validation-for="Nome" class="validation-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">E-mail:</label>
+                        <input type="email" asp-for="Email" placeholder="E-mail" required />
+                        <span asp-validation-for="Email" class="validation-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Senha">Senha:</label>
+                        <input type="password" asp-for="Senha" placeholder="Senha" required />
+                        <span asp-validation-for="Senha" class="validation-message"></span>
+                    </div>
+                </div>
+
+                <button id="register-btn" type="submit" class="btn">Registrar</button>
+                <p id="register-message" class="message"></p>
+            </form>
+
+            <!-- Login -->
+            <form id="login-form">
+                <h2>Login</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="email" id="login-email" placeholder="E-mail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="login-senha" placeholder="Senha" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Entrar</button>
+                <p id="login-message" class="message"></p>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="~/js/usuario.js"></script>
+</body>
+
+</html>
